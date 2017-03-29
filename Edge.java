@@ -1,6 +1,6 @@
 package FinalDikjstra;
 
-/**
+/*
  * Created by eeliz_000 on 3/24/2017.
  * Used by the graph class
  */

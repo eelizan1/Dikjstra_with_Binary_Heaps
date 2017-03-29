@@ -3,7 +3,7 @@ package FinalDikjstra;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
+/*
  * Created by eeliz_000 on 3/24/2017.
  * Vertex class will be used by the graph class
  */

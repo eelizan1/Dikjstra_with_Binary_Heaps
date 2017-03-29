@@ -3,8 +3,15 @@ package FinalDikjstra;
 import java.util.HashMap;
 import java.util.Map;
 
-/**
+/*
  * Created by eeliz_000 on 3/24/2017.
+ *
+ *  This class holds the algorithm to find the shortest path.
+ *
+ *  Main Components:
+ *      ShortestPath map
+ *      Binary Heap data structure
+ *      Distance map to store the shortest distance
  */
 public class DijkstraAlgorithm {
 

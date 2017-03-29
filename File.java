@@ -4,12 +4,19 @@ import java.io.*;
 import java.util.Map;
 import java.util.Scanner;
 
-/**
+/*
  * Created by eeliz_000 on 3/28/2017.
+ *
+ *  Class file is used to process original text files into another format
+ *  New format will allow the text file to be processed by the algorithm
  */
 public class File {
     private static Graph<Integer> graph = new Graph<>(false);
 
+    /*
+        convert will accept files and convert them to a new format
+        used by the Main class
+     */
     public static void convert(String origialfile, String outputFile) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader(origialfile));
         //String builder for creating format
@@ -54,6 +61,10 @@ public class File {
         }
     }
 
+    /*
+        getPath is to process the newly converted text file
+        Used by the main class
+     */
     public static void getPath(String file) {
         Scanner scanner = null;
         int path = 0;
@@ -72,15 +83,18 @@ public class File {
                 //System.out.println(startVertex + ": " + endVertex + ": " + weight);
                 graph.addEdge(startVertex, endVertex, weight);
 
+                // call the DijkstraAlogorithm to process the text files for shortes path
                 DijkstraAlgorithm algorithm = new DijkstraAlgorithm();
+                // specify the source vertex as 0
                 Vertex<Integer> sourceVertex = graph.getVertex(0);
+                // map to hold the shortest distance from source
                 Map<Vertex<Integer>, Integer> distance = algorithm.shortestPath(graph, sourceVertex);
-                //System.out.print(distance);
+                // adds the sum from the map to compute shortest path
                 int sum = 0;
                 for (int f : distance.values()) {
                     sum += f;
                 }
-
+                // store shortest path sum in path
                 path = sum;
             }
 

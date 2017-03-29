@@ -2,11 +2,14 @@ package FinalDikjstra;
 
 import java.util.*;
 
-/**
+/*
  * Created by eeliz_000 on 3/24/2017.
  * This class uses Vertex and Edge class to construct the graph map
- * Graph will be called in main class
+ * Graph will be called file class to construct graph from files
  *
+ * Main Components:
+ *      List of edges
+ *      List of vertices
  */
 public class Graph<T> {
     // all edges in the graph

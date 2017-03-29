@@ -3,6 +3,14 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+/*
+    Class is to act as the queue to keep track of the vertices and their values
+    as well as extract the min vertex.
+
+    Will perform like a regular binary heap but with modified datastucture (maps, lists)
+
+    Main components: Data Structure, list of nodes, node positions
+ */
 
 public class BinaryHeap<T> {
 
